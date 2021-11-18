@@ -1,0 +1,72 @@
+<div class="dl-block">
+  <div class="dl-block-animation-one"></div>
+  <pre><code [innerHTML]="dlBlockOne"></code></pre>
+</div>
+
+<div>
+  <hr />
+</div>
+
+<pre>
+Для управления CSS animations есть 9 свойств:
+
+   1) <strong>name</strong> — здесь указвается имя анимации, которое связывает правило @keyframes с селектором.
+
+   2) <strong>iteration-count</strong> — задаёт количество повторов анимации, значение по умолчанию 1.
+      Значение infinite означает, что анимация будет проигрываться бесконечно.
+
+   3) <strong>direction</strong> — задаёт направление анимации.
+
+   4) <strong>play-state</strong> — данное свойство управляет остановкой и прогрыванием анимации.
+      Есть два значения, running (анимация проигрывается, по умолчанию) и paused (останавливает анимацию).
+
+   5) <strong>fill-mode</strong> — устанавливает, какие CSS-свойства будут приминены к объекту до или после анимации.
+      Может принимать такие значения:
+       - none — анимируемые CSS-свойства применятся к объекту только во время воспроизведения анимации,
+         по окончании объект возвращается в исходное состояние;
+       - forwards — анимируемые CSS-свойства применятся к объекту по окончании воспроизведения анимации;
+       - backwards — анимируемые CSS-свойства применятся к объекту до начала воспроизведения анимации;
+       - both — анимируемые CSS-свойства применятся к объекту и до начала, и после окончания воспроизведения анимации;
+
+ 6-8) свойства <strong>duration</strong>, <strong>timing-function</strong>, <strong>delay</strong> работают так же,
+      как аналогичные свойства в CSS transitions, о которых я писал раньше, поэтому не буду повторяться.
+
+   9) <strong>animation</strong> - это общее свойство, которое позволяет перечислить первые восемь свойств в порядке:
+      <strong>name</strong>, <strong>duration</strong>, <strong>timing-function</strong>, <strong>delay</strong>, <strong>iteration-count</strong>, <strong>direction</strong>, <strong>fill-mode</strong>, <strong>play-state</strong>.
+</pre>
+
+<div>
+  <hr />
+</div>
+
+<div class="dl-block-loaders">
+  <div class="dl-block">
+    <div class="loader-container">
+      <div class="loader-1"></div>
+    </div>
+  </div>
+
+  <div class="dl-block">
+    <div class="loader-container">
+      <div class="loader-2"></div>
+    </div>
+  </div>
+
+  <div class="dl-block">
+    <div class="loader-container">
+      <div class="loader-3">
+        <div class="item-1"></div>
+        <div class="item-2"></div>
+        <div class="item-3"></div>
+        <div class="item-4"></div>
+        <div class="item-5"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="dl-block">
+    <div class="loader-container">
+      <div class="loader-4"></div>
+    </div>
+  </div>
+</div>

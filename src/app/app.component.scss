@@ -8,4 +8,14 @@ nav {
   .nav-link {
     font-size: 1.4em;
   }
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+
+    li {
+      margin-left: 30px;
+    }
+  }
 }

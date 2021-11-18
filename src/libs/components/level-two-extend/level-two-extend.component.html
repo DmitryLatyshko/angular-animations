@@ -1,0 +1,27 @@
+<div class="dl-block">
+  <div class="dl-block-animation-one">
+    <div class="airplane"></div>
+    <div class="point point_1"></div>
+    <div class="point point_2"></div>
+    <div class="point point_3"></div>
+    <div class="point point_4"></div>
+    <div class="point point_5"></div>
+    <div class="point point_6"></div>
+  </div>
+</div>
+
+<div>
+  <hr />
+</div>
+
+<pre>
+Для управления motion path-анимацией есть 3 свойств:
+
+   1) <strong>offset-path</strong> — это свойство позволяет указать точки(координаты) по которым будет двигаться объект. Синтаксис такой же как у SVG-атрибута path.
+
+   2) <strong>offset-distance</strong> — это свойство приводит объект в движение от начальной точки до конечной.
+      Оно принимает либо двойное значение длины, либо проценты. Чтобы объект начал двигаться, нужно определить анимацию, которая будет идти от 0 до 100%.
+
+   3) <strong>offset-rotate</strong> — это свойство позволяет указать, какой стороной вперед будет двигаться объект.
+      Можно указать auto, reverse или свое значение в градусах ('-45deg', '30deg' и т.д).
+</pre>

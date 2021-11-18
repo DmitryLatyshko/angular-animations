@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
+import { DlLevelOneComponent, DlLevelTwoComponent, DlLevelTwoExtendComponent } from 'src/libs';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
@@ -15,6 +16,18 @@ const appRoutes: Routes = [
   {
     path: 'main',
     component: MainComponent,
+  },
+  {
+    path: 'level-one',
+    component: DlLevelOneComponent,
+  },
+  {
+    path: 'level-two',
+    component: DlLevelTwoComponent,
+  },
+  {
+    path: 'level-two-extend',
+    component: DlLevelTwoExtendComponent,
   },
 ];
 

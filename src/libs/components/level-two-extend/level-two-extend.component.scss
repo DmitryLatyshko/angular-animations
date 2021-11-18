@@ -1,0 +1,88 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+pre {
+  margin: 0 1em;
+  background-color: #cfcfcf;
+  border: 2px solid #808080;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.dl-block {
+  margin: 20px;
+}
+
+.dl-block-animation-one {
+  position: relative;
+  overflow: hidden;
+  max-width: 1200px;
+  height: 675px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+
+  .airplane {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url("../../../assets/airplane.svg") no-repeat;
+    transform: rotate(90deg);
+    offset-path: path(
+      "M 235,323 Q 412,440 365,615 Q 400,300 670,240 L 870,340 L 975,535 Q 730,600 630,535 z"
+    );
+    animation: airplane-fly 13s infinite linear;
+    z-index: 2;
+  }
+
+  .point {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.05);
+  }
+
+  .point_1 {
+    top: 323px;
+    left: 235px;
+  }
+
+  .point_2 {
+    top: 615px;
+    left: 365px;
+  }
+
+  .point_3 {
+    top: 240px;
+    left: 670px;
+  }
+
+  .point_4 {
+    top: 340px;
+    left: 870px;
+  }
+
+  .point_5 {
+    top: 535px;
+    left: 975px;
+  }
+
+  .point_6 {
+    top: 535px;
+    left: 630px;
+  }
+}
+
+@keyframes airplane-fly {
+  0% {
+    offset-distance: 0;
+  }
+  100% {
+    offset-distance: 100%;
+  }
+}
