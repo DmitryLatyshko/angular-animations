@@ -3,7 +3,13 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
-import { DlLevelOneComponent, DlLevelTwoComponent, DlLevelTwoExtendComponent } from 'src/libs';
+import {
+  DlLevelOneComponent,
+  DlLevelThreeComponent,
+  DlLevelThreeExtendComponent,
+  DlLevelTwoComponent,
+  DlLevelTwoExtendComponent,
+} from 'src/libs';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
@@ -29,12 +35,18 @@ const appRoutes: Routes = [
     path: 'level-two-extend',
     component: DlLevelTwoExtendComponent,
   },
+  {
+    path: 'level-three',
+    component: DlLevelThreeComponent,
+  },
+  {
+    path: 'level-three-extend',
+    component: DlLevelThreeExtendComponent,
+  },
 ];
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     CommonModule,
     BrowserModule,
