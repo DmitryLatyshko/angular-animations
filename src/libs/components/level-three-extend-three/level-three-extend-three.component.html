@@ -1,0 +1,28 @@
+<div class="dl-level-three-extend-three">
+  <pre>
+Для определения анимированной смены представления при смене URL используется свойство <strong>animation</strong> (название может быть другим), указанное в свойстве маршрута <strong>data</strong>.
+В качестве значения свойству <strong>animation</strong> задается имя состояния анимации.
+
+В шаблоне компонента (<strong>см. ниже</strong>), в котором будет происходить загрузка представления по запрашиваемому URL, элемент <strong><code [innerText]="'<router-outlet>'"></code></strong> является дочерним по отношению
+  к элементу <strong><code [innerText]="'<div>'"></code></strong>, для которого определяется <strong>routeChangeAnimation</strong>. Для определения имени состояния используется метод <strong>getRouteAnimationState()</strong>,
+  извлекающий значение свойства <strong>animation</strong>, заданное для текущего маршрута.
+<code class="extend-code" [innerText]="dlBlockCodeComponent"></code>
+Определение самой Angular анимации ограничивается в данном случае описанием смены между собой пары состояний <strong>page1</strong> и <strong>page2</strong>.
+
+Поскольку в момент смены состояний новое представление вставляется сразу же после предыдущего, элементу, для которого определен триггер,
+  задается относительное позиционирование, а дочерним по отношению к нему элементам - абсолютное.
+Это нужно для избежания одновременного появления на странице двух представлений.
+<code class="extend-code" [innerText]="dlBlockCodeStyle"></code>
+Здесь <strong>query()</strong> используется для задания исходных стилей выборке элементов.
+
+Далее представление маршрута, на который осуществляется переход, скрывается сдвигом влево.
+<code class="extend-code" [innerText]="dlBlockCodeQueryEnter"></code>
+А в представлении, с которого происходит переход, инициируется с помощью функции <strong>animateChild()</strong> вызов его дочерних анимаций.
+<code class="extend-code" [innerText]="dlBlockCodeQueryLeave"></code>
+После функция <strong>group()</strong> запускает одновременно анимированную смену представлений. Старое представление сдвигается за пределы окна вправо,
+  а новое, которое было изначально спрятано слева, появляется.
+<code class="extend-code" [innerText]="dlBlockCodeGroupQueryLeave"></code>
+И в конце инициируется запуск дочерних Angular анимаций нового представления.
+<code class="extend-code" [innerText]="dlBlockCodeGroupEnter"></code>
+  </pre>
+</div>

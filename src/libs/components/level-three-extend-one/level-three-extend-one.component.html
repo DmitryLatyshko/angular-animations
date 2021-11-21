@@ -1,0 +1,19 @@
+<div class="dl-block">
+  <div class="dl-block-animation-one" [@reusableAnimation]="firstState" (click)="changeFirstState()">
+    This is reusable animation.
+  </div>
+  <pre><code [innerText]="dlBlockOne"></code></pre>
+</div>
+
+<div>
+  <hr />
+</div>
+
+<pre>
+С помощью метода <strong>animation()</strong> описывается анимация. В двойных фигурных скобках описаны параметры, передаваемые анимации при ее вызове через <strong>useAnimation()</strong>.
+Также допустимо использование константных значений.
+
+Функция <strong>useAnimation()</strong> принимает два параметра:
+  1) анимация - определення для переиспользования;
+  2) объект - в свойстве <strong>params</strong> которого указываються значения параметров.
+</pre>

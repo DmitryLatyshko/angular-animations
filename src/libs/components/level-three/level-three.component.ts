@@ -1,4 +1,10 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { Component } from '@angular/core';
 
 @Component({
@@ -14,9 +20,9 @@ import { Component } from '@angular/core';
   ],
 })
 export class DlLevelThreeComponent {
-  public isExpandedFirst: boolean = false
+  public isExpandedFirst: boolean = false;
   public firstState: string = 'initial';
-  public isExpandedSecond: boolean = false
+  public isExpandedSecond: boolean = false;
   public secondState: string = 'initial';
 
   public dlBlockOneComponent = `@Component({

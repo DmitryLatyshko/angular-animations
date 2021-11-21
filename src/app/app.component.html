@@ -17,10 +17,38 @@
         <a class="nav-link" [routerLink]="'/level-three'">Angular animations</a>
       </li>
       <li>
-        <a class="nav-link" [routerLink]="'/level-three-extend'">Angular reuse animations</a>
+        <a class="nav-link" [routerLink]="'/level-three-extend-one'">Angular reuse animations</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="'/level-three-extend-two'">Angular strong animations</a>
+      </li>
+      <li>
+        <a class="nav-link" [routerLink]="'/level-three-extend-three'">Angular animated route changed</a>
       </li>
     </ul>
   </div>
 </nav>
 <hr/>
-<router-outlet></router-outlet>
+<ng-container *ngIf="isShowHiddenRoutes">
+  <nav>
+    <div>
+      <ul>
+        <li>
+          <a class="nav-link" [routerLink]="'level-three-extend-three/route-one'">Route one</a>
+        </li>
+        <li>
+          <a class="nav-link" [routerLink]="'level-three-extend-three/route-two'">Route two</a>
+        </li>
+        <li>
+          <a class="nav-link" [routerLink]="'level-three-extend-three/route-three'">Route three</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <hr/>
+  <dl-level-three-extend-three></dl-level-three-extend-three>
+  <hr/>
+</ng-container>
+<div class="dl-router-outlet" [@routeChangeAnimation]="getRouteAnimationState(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

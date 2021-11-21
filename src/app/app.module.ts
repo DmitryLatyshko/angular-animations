@@ -6,13 +6,17 @@ import { RouterModule, Routes } from '@angular/router';
 import {
   DlLevelOneComponent,
   DlLevelThreeComponent,
-  DlLevelThreeExtendComponent,
+  DlLevelThreeExtendOneComponent,
+  DlLevelThreeExtendThreeComponent,
+  DlLevelThreeExtendTwoComponent,
   DlLevelTwoComponent,
   DlLevelTwoExtendComponent,
+  RoutingModule,
 } from 'src/libs';
 
 import { AppComponent } from './app.component';
 import { MainComponent } from './pages/main/main.component';
+import { DlRoutingComponent } from './pages/routing/routing.component';
 
 const appRoutes: Routes = [
   {
@@ -40,16 +44,25 @@ const appRoutes: Routes = [
     component: DlLevelThreeComponent,
   },
   {
-    path: 'level-three-extend',
-    component: DlLevelThreeExtendComponent,
+    path: 'level-three-extend-one',
+    component: DlLevelThreeExtendOneComponent,
+  },
+  {
+    path: 'level-three-extend-two',
+    component: DlLevelThreeExtendTwoComponent,
+  },
+  {
+    path: 'level-three-extend-three',
+    component: DlRoutingComponent,
   },
 ];
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, DlLevelThreeExtendThreeComponent],
   imports: [
     CommonModule,
     BrowserModule,
+    RoutingModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' }),
   ],

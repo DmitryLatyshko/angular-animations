@@ -1,0 +1,64 @@
+<div class="dl-block">
+  <div class="dl-block-animation-one" @appearingItems>
+    <ul class="users">
+      <li>James</li>
+      <li>Robert</li>
+    </ul>
+  </div>
+  <pre><code [innerText]="dlBlockOne"></code></pre>
+</div>
+
+<div>
+  <hr />
+</div>
+
+<pre>
+Здесь Angular анимация appearingItems определяется для появляющихся элементов списка (состояние <strong>:enter</strong>) с классом стилей <strong>.users</strong>.
+
+Первым параметром <strong>query()</strong> передается селектор (критерий поиска элементов), а вторым - массив с описанием анимации,
+где первое использование функции <strong>style()</strong> задает исходные стили для элементов, попадающих под критерии поиска.
+</pre>
+
+<div>
+  <hr />
+</div>
+
+<div class="dl-block">
+  <div class="dl-block-animation-two" @groupAnimation>
+    <ul class="users">
+      <li>John</li>
+      <li>Michael</li>
+    </ul>
+  </div>
+  <pre><code [innerText]="dlBlockTwo"></code></pre>
+</div>
+
+<pre>
+Сразу стоит отметить, что функция <strong>group()</strong> группирует не элементы, а стадии составной анимации применительно к одному элементу,
+которые работают одновременно и независимо друг от друга.
+
+Как и в предыдущем примере, использование <strong>style()</strong> задает исходные стили элемента.
+Далее с помощью <strong>group()</strong> для каждого свойства задается своя конфигурация анимирования.
+</pre>
+
+<div>
+  <hr />
+</div>
+
+<div class="dl-block">
+  <div class="dl-block-animation-three" @sequenceAnimation>
+    <ul class="users">
+      <li>William</li>
+      <li>David</li>
+    </ul>
+  </div>
+  <pre><code [innerText]="dlBlockThree"></code></pre>
+</div>
+
+<div>
+  <hr />
+</div>
+
+<pre>
+Анимирование с помощью <strong>sequence()</strong> по написанию схоже с <strong>group()</strong>, но выполнение этой же Angular анимации последовательно без использования задержки.
+</pre>
